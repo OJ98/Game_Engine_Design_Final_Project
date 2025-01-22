@@ -1,0 +1,1 @@
+gameobject6.event_json = JSON.stringify({ "Event_Type": "Respawn_Script", "Raised": true })
