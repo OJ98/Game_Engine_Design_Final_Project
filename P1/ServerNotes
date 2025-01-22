@@ -1,0 +1,30 @@
+//Server Side - Register Client
+//Register client if it is new - with EOL value/EOL+Last Known Position value pushed onto all relevant lists.
+
+//Server side - Regular Process
+//For all other clients, parse client IDs and movement vector.
+//Movement is a synchronization vector containing all positions that are meant to be synced.
+//Add this to a List of tuples of form <clientID, movement>. This is the universal movement list of this client.
+//Push this TUPLE to all known unprocessed movement lists attached to all known clients.
+//For all clients that are not this client, check the unprocessed movement lists and see if the value is EOL.
+//If value is EOL, then the clients movement has been fully processed and no change needs to be made. Add ClientID:None to the reply object
+//If value is not EOL, add clientID:movement to the reply object.
+//Serialize and send this object to the client.
+
+//Server side - disconnect
+//Propagate disconnect message to all known clients.
+//Client side handles cleanup.
+
+//Client Side - Register.
+//Send RegisterClient message to server.
+//Server replies with a list of clientID:movement pairs.
+//Instantiate as many player objects as there are clients and put them in a list indexed on clientID.
+
+//Client Side - Regular Process.
+//Network update function sends current position of its client to the server.
+//In reply, server sends a list of clientID-movement pairs to the client.
+//Update all the known positions.
+
+//Client Side - Disconnect.
+//In case client receives a clientID:disconnect message, the client frees up the relevant client ID by deallocating the memory attached to the pointer.
+//Further, the index in the list of pointers is marked so as to not process it further.
