@@ -1,4 +1,4 @@
-# P1 Execution
+# P1 (Final Engine) Execution
 ## How to Compile:    
     Execute ./Server to run server first.
     Note: If you want to recompile the server, first run the following commands:
@@ -23,7 +23,7 @@
 ## Notes:
     1. Colliding with a death zone will initiate the respawn event triggered by the script.
 
-# P2 Execution 
+# P2 (Flappy Bird) Execution 
 ## How to Compile:    
     Execute ./Server to run server first.
     Note: If you want to recompile the server, first run the following commands:
@@ -47,7 +47,7 @@
 ## Note:
     1. Colliding with the bottom of the screen will reset the bird's position and flash "FAILURE" on the screen.
 
-# P3 Execution
+# P3 (Space Invaders) Execution
 ## How to Compile:    
     Execute ./Server to run server first.
     Note: If you want to recompile the server, first run the following commands:
